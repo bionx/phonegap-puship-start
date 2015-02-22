@@ -52,6 +52,7 @@ var app = {
 
 		Puship.EnableLog = true;
 		Puship.PushipAppId = "Hb9pWkaMnKWbrTT"; // I.E.: puship_id = "h1mCVGaP9dtGnwG"
+		Puship.PushipAppId = "1OFBP5XciMjsjbw";
 		
 		
 		Puship.Common.OnPushReceived(function(event) {
@@ -61,7 +62,8 @@ var app = {
 		});
 
 		if (Puship.Common.GetCurrentOs()==Puship.OS.ANDROID){
-			var GCMCode = "301183688387"; // This is the senderID provided by Google. I.E.: "28654934133"
+			//var GCMCode = "301183688387"; // This is the senderID provided by Google. I.E.: "28654934133"
+			var GCMCode = "352321724140";
 			Puship.GCM.Register(GCMCode,
 			{
 				successCallback: function (pushipresult){
