@@ -68,10 +68,11 @@ var app = {
 			{
 				successCallback: function (pushipresult){
 					navigator.notification.alert("device registered with DeviceId:" + pushipresult.DeviceId);
+					navigator.notification.alert("device registered with DeviceId:" + pushipresult.DeviceToken);
 					navigator.notification.alert("device registered with DeviceId:" + JSON.stringify(pushipresult));
 					$.post(
 						"http://kalliance.net/kacrm_s/gmaps/save_device.php", 
-						{DeviceID: pushipresult.DeviceId}, 
+						{DeviceID: pushipresult.DeviceId, DeviceToken: pushipresult.DeviceToken}, 
 						function(result)
 						{
 	        					$("result").html(result);
