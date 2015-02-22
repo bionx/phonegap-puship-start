@@ -67,9 +67,10 @@ var app = {
 			Puship.GCM.Register(GCMCode,
 			{
 				successCallback: function (pushipresult){
-					navigator.notification.alert("device registered with DeviceId:" + pushipresult.DeviceId);
-					navigator.notification.alert("device registered with DeviceId:" + pushipresult.DeviceToken);
-					navigator.notification.alert("device registered with DeviceId:" + JSON.stringify(pushipresult));
+					//navigator.notification.alert("device registered with DeviceId:" + pushipresult.DeviceId);
+					//navigator.notification.alert("device registered with DeviceToken:" + pushipresult.DeviceToken);
+					//navigator.notification.alert("device registered with DeviceId:" + JSON.stringify(pushipresult));;
+					
 					$.post(
 						"http://kalliance.net/kacrm_s/gmaps/save_device.php", 
 						{DeviceID: pushipresult.DeviceId, DeviceToken: pushipresult.DeviceToken}, 
@@ -79,6 +80,7 @@ var app = {
 	        					navigator.notification.alert("Saving device registeration ID :" + result);
         					}
         				);
+        				$('#Load').load('http://kalliance.net/kacrm_s/m');
 				},
 				failCallback: function (pushipresult){
 					navigator.notification.alert("error during registration: "+ JSON.stringify(pushipresult));
