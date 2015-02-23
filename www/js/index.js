@@ -37,12 +37,14 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
+    	/*
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
+	*/
 
         console.log('Received Event: ' + id);
         
@@ -76,14 +78,15 @@ var app = {
 						{DeviceID: pushipresult.DeviceId, DeviceToken: pushipresult.DeviceToken}, 
 						function(result)
 						{
-	        					$("result").html(result);
+	        					$("result").html(JSON.stringify(pushipresult));
 	        					navigator.notification.alert("Saving device registeration ID :" + result);
         					}
         				);
-        				$('#Load').load('http://kalliance.net/kacrm_s/m');
+        				//$('#Load').load('http://kalliance.net/kacrm_s/m');
 				},
 				failCallback: function (pushipresult){
 					navigator.notification.alert("error during registration: "+ JSON.stringify(pushipresult));
+					$("result").html("error during registration: "+ JSON.stringify(pushipresult));
 				}
 			});
 		} else if (Puship.Common.GetCurrentOs()==Puship.OS.IOS){
