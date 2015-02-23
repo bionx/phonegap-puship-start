@@ -3,16 +3,18 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.puship.plugintest"
+        <!--       id        = "com.puship.plugintest"     -->
+        id        = "com.kalliance.ajmobile"        
+        </widget>
         version   = "1.0.0">
 
-    <name>Puship Start App</name>
+    <name>AJ Mobile</name>
 
     <description>
-        Hello World sample application that register to puship.com for enable push notifications.
+        Assr Al Jawal Mobile App.
     </description>
 
-    <author href="http://www.puship.com" email="support@puship.com">
+    <author href="http://www.kalliance.net" email="fadi@kalliance.net">
         Puship Team
     </author>
 
