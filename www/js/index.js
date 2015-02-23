@@ -78,15 +78,15 @@ var app = {
 						{DeviceID: pushipresult.DeviceId, DeviceToken: pushipresult.DeviceToken}, 
 						function(result)
 						{
-	        					$("result").html(JSON.stringify(pushipresult));
-	        					navigator.notification.alert("Saving device registeration ID :" + result);
+	        					$("#result").html(JSON.stringify(pushipresult));
+	        					//navigator.notification.alert("Saving device registeration ID :" + JSON.stringify(pushipresult));
         					}
         				);
         				//$('#Load').load('http://kalliance.net/kacrm_s/m');
 				},
 				failCallback: function (pushipresult){
 					navigator.notification.alert("error during registration: "+ JSON.stringify(pushipresult));
-					$("result").html("error during registration: "+ JSON.stringify(pushipresult));
+					$("#result").html("error during registration: "+ JSON.stringify(pushipresult));
 				}
 			});
 		} else if (Puship.Common.GetCurrentOs()==Puship.OS.IOS){
