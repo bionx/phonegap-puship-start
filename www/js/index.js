@@ -34,6 +34,9 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        this.appView.getSettings().setUseWideViewPort(true);
+	this.appView.getSettings().setLoadWithOverviewMode(true);
+	this.appView.getStrings().setSupportZoom(true);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
