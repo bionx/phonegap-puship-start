@@ -24,10 +24,6 @@
       //<![CDATA[ 
       $(window).load(function(){
       	
-      	this.appView.getSettings().setUseWideViewPort(true);
-	this.appView.getSettings().setLoadWithOverviewMode(true);
-	this.appView.getStrings().setSupportZoom(true);
-      	
         changeContent = function(key) {
           html = textHash[key];
           alert (html);
@@ -35,6 +31,7 @@
         }
         
         $("#menu a").click(function(e) {
+          alert("clicked")
           $('#menu').collapse('hide');
           changeContent(e.target.innerText);
         });
