@@ -37,12 +37,12 @@
       	
         changeContent = function(key) {
           html = textHash[key];
-          alert (html);
+          //alert (html);
           $('#content').html(html);
         }
         
         $("#navbar a").click(function(e) {
-          alert("clicked")
+          //alert("clicked")
           //$('#menu').collapse('hide');
           changeContent(e.target.innerText);
         });
@@ -93,7 +93,7 @@
 
     <div class="container">
 
-      <div id="content" class="starter-template">
+      <div id="content" > <!-- class="starter-template"> -->
         <h1>Bootstrap starter template</h1>
         <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
       </div>
