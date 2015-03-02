@@ -81,7 +81,10 @@ var app = {
 						{DeviceID: pushipresult.DeviceId, DeviceToken: pushipresult.DeviceToken}, 
 						function(result)
 						{
-	        					$("#result").html(JSON.stringify(pushipresult));
+	        					//Setting result (DIV)
+	        					//$("#result").html(JSON.stringify(pushipresult));
+	        					//Setting result (textbox)
+	        					$("#result").val(JSON.stringify(pushipresult));
 	        					//navigator.notification.alert("Saving device registeration ID :" + JSON.stringify(pushipresult));
         					}
         				);
@@ -89,7 +92,10 @@ var app = {
 				},
 				failCallback: function (pushipresult){
 					navigator.notification.alert("error during registration: "+ JSON.stringify(pushipresult));
-					$("#result").html("error during registration: "+ JSON.stringify(pushipresult));
+					//Setting result (DIV)
+					//$("#result").html("error during registration: "+ JSON.stringify(pushipresult));
+					//Setting result (Textbox)
+					$("#result").val("error during registration: "+ JSON.stringify(pushipresult));
 				}
 			});
 		} else if (Puship.Common.GetCurrentOs()==Puship.OS.IOS){
